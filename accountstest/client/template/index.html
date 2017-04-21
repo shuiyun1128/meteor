@@ -1,0 +1,10 @@
+<template name="index">
+    <h1>首页</h1>
+    {{#if islogin}}
+        <p>ID:{{user.id}}</p>
+        <p>username:{{user.username}}</p>
+        <button type="button" class="btn btn-primary" id="logout">退出</button>
+    {{else}}
+        <a href="{{pathFor 'login'}}">登录</a>
+    {{/if}}
+</template> 

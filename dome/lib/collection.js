@@ -1,0 +1,46 @@
+List = new Mongo.Collection('list'); 
+if(Meteor.isServer){
+    List._ensureIndex({
+        sellerName:1,
+        buyerName:1,
+        creditorAmount:1,
+        creditorDueDate:1,
+        transType:1,
+        limitAmout:1,
+        approvedAmount:1
+    })
+}
+ListSchema = new SimpleSchema({
+    sellerName:{
+        type:String,
+        label:'债权人(公司)'
+    },
+    buyerName:{
+        type:String,
+        label:'债务人(公司)'
+    },
+    creditorAmount:{
+        type:Number,
+        label:'应收帐款金额'
+    },
+    creditorDueDate:{
+        type:Date,
+        label:'应收帐款到期日'
+    },
+    transType:{
+        type:String,
+        label:'转让类型'
+    },
+    limitAmout:{
+        type:Number,
+        label:'申请额度'
+    },
+    approvedAmount:{
+        type:Number,
+        label:'核准金额'
+    },
+    owner:{
+        type:String
+    }
+})
+List.attachSchema(ListSchema)

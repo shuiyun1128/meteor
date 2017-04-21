@@ -1,0 +1,20 @@
+.container{
+    padding: 0 20px;
+}
+.title{ 
+    background: #ebeff3;
+    padding:5px 10px;
+    margin-bottom: 10px;
+}
+.table{
+    margin-top:10px;
+}
+.table th{
+    background: #bad9f5;
+}
+.table > thead > tr > th{
+    border-color:#bad9f5;
+}
+.table > tbody > tr > td{
+    border-color:#bad9f5;
+}

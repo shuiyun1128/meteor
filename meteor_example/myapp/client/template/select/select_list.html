@@ -1,0 +1,10 @@
+<template name="select">
+  {{#each selectList}}
+    <input type="checkbox" checked="{{equal selected 'yes'}}">{{name}}
+  {{/each}}
+  <select>
+    {{#each selectList}}
+      <option value="{{name}}" selected="{{equal selected 'yes'}}">{{name}}</option>
+    {{/each}}
+  </select>
+</template>

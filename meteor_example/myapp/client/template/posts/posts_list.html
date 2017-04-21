@@ -1,0 +1,8 @@
+<template name="postsList"><!--模版名称-->
+	<div class="list">
+		<h3>这是个列表</h3>
+		{{#each posts}}<!--posts为循环对象-->
+			{{> postItem}}<!--引入模块-->
+		{{/each}}
+	</div>
+</template>

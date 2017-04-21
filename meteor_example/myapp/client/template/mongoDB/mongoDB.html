@@ -1,0 +1,37 @@
+<template name='mongoDB'>
+    <div class="row">
+        <form class="form-horizontal">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="title" class="col-sm-2 control-label">站点</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" id="title">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="url" class="col-sm-2 control-label">网站</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" id="url">
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="submit" class="btn btn-primary">提交</button>
+        </form>
+    </div>
+    <ul class="list-group">
+        {{#each urlList}}
+            <li class="list-group-item">
+                {{#if edit _id}}
+                    <input type="text" value="{{title}}">
+                {{else}}
+                    {{title}}
+                {{/if}}
+                <small><a href="http://{{url}}">{{url}}</a></small>
+                <span class="glyphicon glyphicon-pencil edit"></span>
+                <span class="glyphicon glyphicon-trash pull-right delete"></span>
+            </li>
+        {{/each}}
+    </ul>
+</template>

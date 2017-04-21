@@ -1,0 +1,61 @@
+<template name="index">
+  {{#if user}}
+  <div class="container col-xs-12">
+    <header class="title">首页</header>
+    <div class="clearfix">
+      <a class="btn btn-default btn-sm pull-left" href="/addlist"><span class="glyphicon glyphicon-plus"></span> 添加</a>
+      <div class="col-xs-3 pull-right">
+          <div class="input-group">
+              <input type="text" class="form-control" id="searchInput" placeholder="请输入关键字搜索">
+              <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" id="search">搜索</button>
+              </span>
+          </div>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>债权人(公司)</th>
+          <th>债务人(公司)</th>
+          <th>应收帐款金额(万)</th>
+          <th>应收帐款到期日</th>
+          <th>转让类型</th>
+          <th>申请额度(万)</th>
+          <th>核准金额(万)</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#if list}}
+        {{#each list}}
+        <tr>
+          <td>{{sellerName}}</td>
+          <td>{{buyerName}}</td>
+          <td>{{creditorAmount}}</td>
+          <td>{{creditorDueDate}}</td>
+          <td>{{transType}}</td>
+          <td>{{limitAmout}}</td>
+          <td>{{approvedAmount}}</td>
+          <td>
+            <a class="btn btn-default btn-xs btn-info" href="/editlist?id={{_id}}"><span class="glyphicon glyphicon-pencil edit"></span> 修改</a>
+            <a class="btn btn-default btn-xs btn-danger delete"><span class="glyphicon glyphicon-trash"></span> 删除</a>
+          </td>
+        </tr>
+        {{else}}
+        <tr>
+          <td>无搜索数据</td>
+        </tr>
+        {{/each}}
+        {{/if}}
+      </tbody>
+    </table>
+  </div>
+  {{else}}
+  <div class="row">
+    <div class="center-block" style="width:200px;background-color:#bad9f5;">
+      请先登录/注册
+    </div>
+  </div>
+  {{/if}}
+</template>

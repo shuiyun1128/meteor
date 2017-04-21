@@ -1,0 +1,73 @@
+<template name="addlist">
+    <div class="container col-xs-12">
+        <header class="title">{{title}}</header>
+        <form class="form-horizontal" role="form">
+            <div class="row"> 
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-3 control-label">债权人(公司)</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="sellerName" placeholder="请输入债权人公司" value="{{sellerName}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-3 control-label">债务人(公司)</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="buyerName" placeholder="请输入债务人公司" value="{{buyerName}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-3 control-label">应收帐款金额(万)</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="creditorAmount" placeholder="请输入应收帐款金额(万)" value="{{creditorAmount}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-3 control-label">应收帐款到期日</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="creditorDueDate" placeholder="请输入应收帐款到期日" value="{{creditorDueDate}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-3 control-label">转让类型</label>
+                        <div class="col-sm-5">
+                            <select name="transType" class="form-control">
+                                <option value=''>请选择类型</option>
+                                <option value="A类型" selected="{{equal transType 'A类型'}}">A类型</option>
+                                <option value="B类型" selected="{{equal transType 'B类型'}}">B类型</option>
+                                <option value="C类型" selected="{{equal transType 'C类型'}}">C类型</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-3 control-label">申请额度(万)</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="limitAmout" placeholder="请输入申请额度(万)" value="{{limitAmout}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-3 control-label">核准金额(万)</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="approvedAmount" placeholder="请输入核准金额(万)" value="{{approvedAmount}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-11 col-md-offset-1">
+                    <a id="submit" class="btn btn-info">{{btnText}}</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

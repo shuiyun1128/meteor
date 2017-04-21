@@ -1,0 +1,36 @@
+<template name="addaccount">
+    <h2>添加消费记录</h2>
+    <form style="padding:15px;" id="saveForm">
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="name">消费类别</label>
+                <div>
+                    {{#each type}}
+                    <label class="checkbox-inline">
+                        <input type="radio" name="type" value="{{_id}}" checked>{{name}}
+                    </label>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group col-xs-3">
+                    <label for="name">消费金额</label>
+                    <input type="text" class="form-control" name="money" placeholder="文本输入">
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group col-xs-3">
+                    <label for="name">消费说明</label>
+                    <input type="text" class="form-control" name="mome" placeholder="文本输入">
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group col-xs-3">
+                    <label for="name">消费时间</label>
+                    <input type="text" class="form-control" name="createtime" placeholder="文本输入">
+                </div>
+            </div>
+        </div>
+        <button type="button" id="save" class="btn btn-primary">保存</button>
+    </form>
+</template>

@@ -1,0 +1,27 @@
+<template name="book">
+    <div class="container col-xs-8">
+        <div class="page-header clearfix">
+            <h4 class="pull-left">图书</h4>
+            <div class="pull-right">
+                <input type="text" class="form-control" name="search" placeholder="查找">
+            </div>
+        </div>
+        <ul class="list-group">
+            {{#if searching}}
+            ...
+            {{else}}
+            {{#each list}}
+            <li class="list-group-item clearfix">
+                <span class="pull-left">{{title}}</span>
+                <span class="pull-right">{{year}}</span>
+                <span class="pull-right" style="margin-right: 20px;">{{author}}</span>
+            </li>
+            {{else}}
+            <li class="list-group-item">
+                <div class="alert alert-warning">对不起，没有{{searchName}}相关记录</div>
+            </li>
+            {{/each}}
+            {{/if}}
+        </ul>
+    </div>
+</template>

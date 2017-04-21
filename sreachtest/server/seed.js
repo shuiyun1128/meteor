@@ -1,0 +1,32 @@
+if(Book.find().count() == 0){
+    Book.insert({
+        title:'新内容创业：我这样打爆爆款IP',
+        author:'曲琳',
+        year:'2016'
+    });
+    Book.insert({
+        title:'为什么投你：一线投资人揭秘',
+        author:'及铁林',
+        year:'2015'
+    });
+    Book.insert({
+        title:'自品牌：个人如何玩转互联网时代',
+        author:'孙婷',
+        year:'2016'
+    });
+    Book.insert({
+        title:'你是独一无二的生意',
+        author:'李东',
+        year:'2014'
+    });
+    Book.insert({
+        title:'卓越转型：知识型员工价值实现',
+        author:'王琳',
+        year:'2016'
+    });
+    Book.insert({
+        title:'思考线：让你的创意变成现实',
+        author:'凯琳.威',
+        year:'2013'
+    });
+}

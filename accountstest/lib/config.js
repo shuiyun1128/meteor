@@ -1,0 +1,44 @@
+if(Meteor.isClient){
+    Meteor.startup(function(){
+        var lang = window.navigator.language || window.navigator.userLanguage;
+        console.log(T9n.getLanguages())
+        T9n.setLanguage(lang);
+        //添加微博登录
+        ServiceConfiguration.configurations.remove({service:'weibo'});
+        ServiceConfiguration.configurations.insert(
+            {
+                service:'weibo',
+                client:'1292962797',
+                loginStyle:'popup',
+                secret:'43242342343243243rewr324'
+            }
+        )
+    })
+}
+AccountsTemplates.removeField('email');
+AccountsTemplates.removeField('password');
+//添加注册配置项
+AccountsTemplates.addFields([
+    {
+        _id:'username',
+        type:'text',
+        required:true,
+        displayName:'用户名',
+        placeholder:'用户名'
+    },
+    {
+        _id:'password',
+        type:'password',
+        required:true,
+        displayName:'密码',
+        placeholder:'密码'
+    },
+    {
+        _id:'password_again',
+        type:'password',
+        required:true,
+        displayName:'重复密码',
+        placeholder:'重复密码'
+    }
+]);
+

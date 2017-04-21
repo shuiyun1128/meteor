@@ -1,0 +1,22 @@
+if(Aggregatetest.find().count() == 0){
+    Aggregatetest.insert({
+        type:"基金",
+        name:'国泰互联网',
+        income:1200
+    });
+    Aggregatetest.insert({
+        type:"基金",
+        name:'建信',
+        income:3200
+    });
+    Aggregatetest.insert({
+        type:"股票",
+        name:'中国神车',
+        income:1000
+    });
+    Aggregatetest.insert({
+        type:"艺术平",
+        name:'士大夫',
+        income:2300
+    });
+}

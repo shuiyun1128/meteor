@@ -1,0 +1,27 @@
+<head>
+  <title>Microscope</title>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Microscope</a>
+      </div>
+    </header>
+    <div id="main">
+      {{> hello}}
+      {{> postsList}}
+      {{> select}}
+      {{> dateTimePicker}}
+      {{> mongoDB}}
+      {{> aggregation}}
+    </div>
+  </div>
+</body>
+<template name="hello">
+  <button class="btn btn-info">click me</button>
+  <p>{{counter}}</p>
+</template>
+
+
+
